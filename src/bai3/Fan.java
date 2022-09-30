@@ -1,16 +1,19 @@
 package bai3;
 
 public class Fan {
-    final int SLOW=1;
-    final int MEDIUM=2;
-    final int FAST=3;
-    private int speed= SLOW;
-    private boolean on= false;
-    private double radius=5;
-    private String color=" blue";
-
+    static final int SLOW=1;
+    static final int MEDIUM=2;
+    static final int FAST=3;
+    private int speed;
+    private boolean on;
+    private double radius;
+    private String color;
+    //khoi tao ham khoi tao va set thuoc tinh mac dinh .
     public Fan() {
-
+        this.speed = SLOW;
+        this.on = false;
+        this.radius = 5;
+        this.color = " blue";
     }
     public int getSLOW() {
         return SLOW;
@@ -57,7 +60,7 @@ public class Fan {
     }
     public String toString(){
         if (this.on){
-            return  "speed = "+ this.speed+"; color: "+this.color+", radius: "+ this.radius+", fan is on.";
+            return  "speed: "+ this.speed+"; color: "+this.color+", radius: "+ this.radius+", fan is on.";
         }else {
             return "color: "+this.color+", radius: "+ this.radius+", fan is off.";
         }
